@@ -10,16 +10,21 @@
     "易键鼠",
     "双头盒子"
   ],
-  "main": "./dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --out-dir dist",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "postbuild": "copyfiles -u 1 src/dll/* dist/"
   },
   "dependencies": {
     "koffi": "^2.11.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.14.1",
+    "@types/node": "^24.0.1",
+    "copyfiles": "^2.4.1",
     "eslint": "^9.28.0",
     "ts-node-dev": "^2.0.0",
     "tsup": "^8.5.0",

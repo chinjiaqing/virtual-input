@@ -3,6 +3,8 @@
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "Node",
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["node"],
     "strict": true,
     "declaration": true,
     "declarationDir": "types",
@@ -11,5 +13,5 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "include": ["src"]
+  "include": ["src/**/*"]
 }
