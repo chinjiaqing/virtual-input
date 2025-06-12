@@ -1,0 +1,28 @@
+{
+  "name": "virtual-input",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.9.0",
+  "description": "易键鼠双头盒子dll的nodejs封装",
+  "author": "chinjiaqing@qq.com",
+  "license": "ISC",
+  "keywords": [
+    "虚拟输入",
+    "易键鼠",
+    "双头盒子"
+  ],
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --out-dir dist",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "dependencies": {
+    "koffi": "^2.11.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.14.1",
+    "eslint": "^9.28.0",
+    "ts-node-dev": "^2.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}
